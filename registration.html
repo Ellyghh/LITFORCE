@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/registration.css">
+    
+</head>
+ 
+<body>
+    <div class="login-container">
+        <div class="logo">
+            <img src="/img/image 10.png" alt="УмныеВрата">
+        </div>
+        
+        <form id="loginForm">
+            <div class="form-group">
+                <!-- клик по метке логин акт след поле ввода -->
+                <label for="login">Логин</label>
+                <input type="text" id="login" name="login" placeholder="Введите ваш логин" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Пароль</label>
+                <input type="password" id="password" name="password" placeholder="Введите ваш пароль" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="confirmPassword">Подтверждение пароля</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Повторите ваш пароль" required>
+                <div class="error-message hidden" id="passwordError">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8C16 12.4183 12.4183 16 8 16ZM8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14ZM7 4H9V6H7V4ZM7 7H9V12H7V7Z" fill="#e74c3c"/>
+                    </svg>
+                    Пароли не совпадают
+                </div>
+            </div>
+            
+            <button type="submit" class="login-btn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 16L14 12L10 8" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M14 12H3" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M15 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3H15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Вход
+            </button>
+        </form>
+        <div class="additional-options">
+            <p><a href="#">Забыли пароль?</a>
+        </div>
+    </div>
+    <script src="/js/main.js"></script>
+</body>
+</html>
