@@ -1,0 +1,113 @@
+/* src/components/layout/Sidebar.css */
+.sidebar {
+    width: 280px;
+    background: linear-gradient(180deg, #2c3e50 0%, #34495e 100%);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sidebar__header {
+    padding: 24px 20px;
+    border-bottom: 1px solid #4a6278;
+    text-align: center;
+  }
+  
+  .sidebar__logo {
+    font-size: 2.5rem;
+    margin-bottom: 8px;
+  }
+  
+  .sidebar__title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0;
+    color: #ecf0f1;
+  }
+  
+  .sidebar__menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex: 1;
+    padding: 20px 0;
+  }
+  
+  .sidebar__item {
+    margin-bottom: 4px;
+  }
+  
+  .sidebar__button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    background: none;
+    border: none;
+    color: #bdc3c7;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+    text-align: left;
+  }
+  
+  .sidebar__button:hover {
+    background-color: #34495e;
+    color: white;
+    padding-left: 25px;
+  }
+  
+  .sidebar__button--active {
+    background-color: #3498db;
+    color: white;
+    border-right: 3px solid #2980b9;
+  }
+  
+  .sidebar__icon {
+    font-size: 1.2rem;
+    margin-right: 12px;
+    width: 24px;
+    text-align: center;
+  }
+  
+  .sidebar__label {
+    font-weight: 500;
+  }
+  
+  .sidebar__footer {
+    padding: 20px;
+    border-top: 1px solid #4a6278;
+  }
+  
+  .user-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .user-avatar {
+    width: 40px;
+    height: 40px;
+    background: #3498db;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+  }
+  
+  .user-info {
+    flex: 1;
+  }
+  
+  .user-name {
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 2px;
+  }
+  
+  .user-role {
+    font-size: 0.8rem;
+    color: #bdc3c7;
+  }
