@@ -208,6 +208,64 @@ input:focus, select:focus { border-color: var(--primary); }
 .day-option:hover { background: #f0f2f5; }
 .day-option.selected { background: #e8f4fd; color: var(--primary); }
 
+/* --- РАСШИРЕННЫЕ ФИЛЬТРЫ --- */
+.filters-panel {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    margin-bottom: 20px;
+}
+
+.filters-grid-advanced {
+    display: grid;
+    /* 3 колонки одинаковой ширины */
+    grid-template-columns: 1fr 1fr 1fr; 
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+/* Кнопки фильтров теперь отдельной строкой */
+.filter-actions-row {
+    display: flex;
+    justify-content: flex-end; /* Кнопки справа */
+    gap: 10px;
+}
+
+.btn-filter {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+.btn-filter.apply { background: var(--primary); color: white; }
+.btn-filter.clear { background: #ecf0f1; color: var(--text-main); border: 1px solid #dce1e6; }
+
+/* Стили для DaysSelector внутри фильтров */
+.days-input.empty {
+    color: var(--text-sec);
+}
+.days-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+/* Мобильная адаптивность для фильтров */
+@media (max-width: 1000px) {
+    .filters-grid-advanced {
+        grid-template-columns: 1fr 1fr; /* 2 колонки на средних экранах */
+    }
+}
+@media (max-width: 700px) {
+    .filters-grid-advanced {
+        grid-template-columns: 1fr; /* 1 колонка на узких */
+    }
+}
+
 /* --- ТАБЛИЦА --- */
 .card-header {
     display: flex;
@@ -261,20 +319,3 @@ input:focus, select:focus { border-color: var(--primary); }
 .icon-btn.edit:hover { background: #e8f4fd; color: var(--primary); }
 .icon-btn.delete { color: #e74c3c; }
 .icon-btn.delete:hover { background: #fadbd8; }
-
-/* --- ФИЛЬТРЫ --- */
-.filters-row {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 15px;
-}
-.filters-row input { flex: 1; }
-.btn-filter {
-    border: none;
-    border-radius: 6px;
-    padding: 0 15px;
-    cursor: pointer;
-}
-
-.btn-filter.apply { background: var(--primary); color: white; }
-.btn-filter.clear { background: #ecf0f1; color: var(--text-main); }
