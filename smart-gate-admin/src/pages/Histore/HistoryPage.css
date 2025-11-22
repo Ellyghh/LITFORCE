@@ -1,4 +1,4 @@
-/* --- ПЕРЕМЕННЫЕ (Совпадают с SettingsPage для единого стиля) --- */
+/* --- ПЕРЕМЕННЫЕ ТЕМЫ --- */
 .theme-light {
     --bg-color: #f0f2f5;
     --card-bg: #ffffff;
@@ -11,6 +11,7 @@
     --warning: #f39c12;
 }
 
+/* --- ОСНОВНОЙ КОНТЕЙНЕР --- */
 .history-page {
     padding: 20px;
     background-color: var(--bg-color);
@@ -29,8 +30,12 @@
     align-items: center;
 }
 
-.page-header h2 { margin: 0; color: var(--text-main); }
+.page-header h2 {
+    margin: 0;
+    color: var(--text-main);
+}
 
+/* Бейдж для охранника */
 .user-badge {
     background: #e8f4fd;
     color: var(--primary);
@@ -50,15 +55,27 @@
     border: 1px solid var(--border);
 }
 
+/* СЕТКА ФИЛЬТРОВ (2 СТРОКИ) */
 .filters-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px 20px;
+    /* Делим пространство на 4 равные колонки */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px;
     margin-bottom: 20px;
+    align-items: end; /* Выравнивание по нижнему краю инпутов */
 }
 
-/* Стили инпутов */
-.filter-item, .filter-group-double {
+/* Одиночные фильтры (занимают 1 клетку) */
+.filter-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+/* Сдвоенные фильтры (Дата и Время) - занимают 2 клетки каждый */
+/* Это заставит их перенестись на вторую строку */
+.filter-group-double {
+    grid-column: span 2;
     display: flex;
     flex-direction: column;
     gap: 6px;
@@ -78,20 +95,31 @@ input, select {
     font-size: 14px;
     outline: none;
     background: #fff;
+    width: 100%; /* Чтобы заполнить ячейку грида */
+    box-sizing: border-box;
 }
 
-input:focus, select:focus { border-color: var(--primary); }
+input:focus, select:focus {
+    border-color: var(--primary);
+}
 
-/* Сдвоенные инпуты (Дата С - По) */
+/* Контейнер для диапазона (Инпут - Инпут) */
 .double-inputs {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
 }
-.double-inputs input { flex: 1; }
-.double-inputs span { color: var(--text-sec); font-weight: bold; }
 
-/* Кнопки фильтров */
+.double-inputs input {
+    flex: 1; /* Растягиваем инпуты равномерно */
+}
+
+.double-inputs span {
+    color: var(--text-sec);
+    font-weight: bold;
+}
+
+/* --- КНОПКИ УПРАВЛЕНИЯ --- */
 .filter-actions {
     display: flex;
     justify-content: flex-end;
@@ -104,10 +132,11 @@ input:focus, select:focus { border-color: var(--primary); }
     background-color: var(--primary);
     color: white;
     border: none;
-    padding: 10px 25px;
+    padding: 10px 30px;
     border-radius: 6px;
     font-weight: bold;
     cursor: pointer;
+    transition: background 0.2s;
 }
 .btn-search:hover { background-color: #2980b9; }
 
@@ -118,23 +147,31 @@ input:focus, select:focus { border-color: var(--primary); }
     padding: 10px 25px;
     border-radius: 6px;
     cursor: pointer;
+    transition: background 0.2s;
 }
 .btn-reset:hover { background-color: #f1f1f1; }
 
 /* --- ТАБЛИЦА --- */
 .table-container {
-    flex: 1;
+    flex: 1; /* Занимает всё оставшееся место */
     background: var(--card-bg);
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    overflow: hidden;
-    overflow-y: auto; /* Скролл для таблицы */
+    overflow: hidden; /* Скрываем вылезающее */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Прокрутка только внутри таблицы */
+.history-table-wrapper { 
+    flex: 1;
+    overflow-y: auto;
 }
 
 .history-table {
     width: 100%;
     border-collapse: collapse;
-    min-width: 800px; /* Чтобы не сжималась слишком сильно */
+    min-width: 900px; /* Мин. ширина, чтобы не сжималось */
 }
 
 .history-table th {
@@ -155,15 +192,20 @@ input:focus, select:focus { border-color: var(--primary); }
     color: var(--text-main);
 }
 
-/* Ячейка с фото */
+/* --- СТИЛИ ЯЧЕЕК --- */
+
+/* Фото */
 .photo-cell { width: 120px; }
 .img-wrapper {
     width: 100px;
-    height: 50px;
+    height: 55px;
     border-radius: 4px;
     overflow: hidden;
     border: 1px solid #ddd;
     background: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .img-wrapper img {
     width: 100%;
@@ -171,9 +213,12 @@ input:focus, select:focus { border-color: var(--primary); }
     object-fit: cover;
     transition: transform 0.3s;
 }
-.img-wrapper:hover img { transform: scale(1.1); }
+.img-wrapper:hover img {
+    transform: scale(1.1);
+    cursor: pointer;
+}
 
-/* Номер машины - жирный и моноширинный */
+/* Номер ТС */
 .plate-cell {
     font-family: 'Courier New', monospace;
     font-weight: bold;
@@ -189,18 +234,18 @@ input:focus, select:focus { border-color: var(--primary); }
 /* Бейджи Направления */
 .badge-direction {
     display: inline-block;
-    padding: 4px 10px;
+    padding: 5px 12px;
     border-radius: 15px;
     font-size: 12px;
     font-weight: bold;
 }
 .badge-direction.in {
-    background: #e8f5e9; /* Светло-зеленый */
+    background: #e8f5e9;
     color: #2e7d32;
     border: 1px solid #c8e6c9;
 }
 .badge-direction.out {
-    background: #e3f2fd; /* Светло-синий */
+    background: #e3f2fd;
     color: #1565c0;
     border: 1px solid #bbdefb;
 }
@@ -212,3 +257,28 @@ input:focus, select:focus { border-color: var(--primary); }
 .badge-status.success { color: var(--success); }
 .badge-status.error { color: var(--danger); }
 .badge-status.warning { color: var(--warning); }
+
+/* --- АДАПТИВНОСТЬ --- */
+@media (max-width: 1200px) {
+    .filters-grid {
+        grid-template-columns: 1fr 1fr; /* 2 колонки на средних экранах */
+    }
+    .filter-group-double {
+        grid-column: span 1; /* Дата и время занимают по 1 слоту из 2 */
+    }
+}
+
+@media (max-width: 768px) {
+    .filters-grid {
+        grid-template-columns: 1fr; /* 1 колонка на мобильных */
+    }
+    .filter-group-double {
+        grid-column: span 1;
+    }
+    .double-inputs {
+        flex-direction: column; /* Инпуты даты друг под другом */
+    }
+    .double-inputs span {
+        display: none; /* Скрываем тире */
+    }
+}
