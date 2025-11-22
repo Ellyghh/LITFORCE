@@ -168,7 +168,7 @@ const DatabasePage: React.FC = () => {
 
         {/* 2. ПАНЕЛЬ ГЕНЕРАЦИИ (ЖК) */}
         <div className="generators-card">
-          <h3>Доступ ЖК (Интеграция)</h3>
+          <h3>Доступ ЖК</h3>
           
           <div className="generator-row">
             <div className="gen-display">

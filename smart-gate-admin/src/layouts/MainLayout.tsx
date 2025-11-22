@@ -11,7 +11,7 @@ const MainLayout: React.FC = () => {
         <nav>
           <ul>
             <li><Link to="/camers">Видеонаблюдение</Link></li>
-            <li><Link to="/database">База данных 3</Link></li>
+            <li><Link to="/database">База данных</Link></li>
             <li><Link to="/settings">Настройки</Link></li>
             <li><Link to="/history">История</Link></li>
             <li><Link to="/users">Пользователи</Link></li>
