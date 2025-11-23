@@ -15,7 +15,6 @@ const MainLayout: React.FC = () => {
             <li><Link to="/settings">Настройки</Link></li>
             <li><Link to="/history">История</Link></li>
             <li><Link to="/users">Пользователи</Link></li>
-            <li><Link to="/exit">Выйти из системы</Link></li>
           </ul>
         </nav>
         
