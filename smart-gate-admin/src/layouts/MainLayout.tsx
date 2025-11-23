@@ -10,7 +10,7 @@ const MainLayout: React.FC = () => {
         <div className="sidebar-header">МЕНЮ</div>
         <nav>
           <ul>
-            <li><Link to="/camers">Видеонаблюдение</Link></li>
+            <li><Link to="/cameras">Видеонаблюдение</Link></li>
             <li><Link to="/database">База данных</Link></li>
             <li><Link to="/settings">Настройки</Link></li>
             <li><Link to="/history">История</Link></li>

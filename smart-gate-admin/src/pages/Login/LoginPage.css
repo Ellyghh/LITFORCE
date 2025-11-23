@@ -1,19 +1,176 @@
-/* src/pages/Login/LoginPage.css */
-.login-page {
-  min-height: 100vh;
+/* ОБЩИЙ КОНТЕЙНЕР: На весь экран, Flexbox */
+.split-screen-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: #fff;
+}
+
+/* --- ЛЕВАЯ ЧАСТЬ (#495180) --- */
+.left-pane {
+  flex: 1; /* Занимает 50% ширины (или больше, если правая фиксирована) */
+  background-color: #495180;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  position: relative;
 }
 
-.login-container {
+/* Белый квадрат с закругленными краями */
+.logo-card {
   background: white;
-  padding: 40px;
-  border-radius: 12px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-  text-align: center;
+  width: 280px;
+  height: 280px;
+  border-radius: 40px; /* Сильное закругление */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2); /* Тень для объема */
+  padding: 30px;
+  box-sizing: border-box;
 }
-* {
-  font-family: 'Poppins', sans-serif !important;
+
+.logo-card img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* --- ПРАВАЯ ЧАСТЬ (Белая) --- */
+.right-pane {
+  flex: 1; /* Тоже занимает место */
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.login-wrapper {
+  width: 100%;
+  max-width: 400px; /* Ограничиваем ширину формы, чтобы не растягивалась */
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.login-wrapper h1 {
+  font-size: 32px;
+  color: #333;
+  margin: 0;
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+.login-wrapper h1 span {
+  font-weight: 800;
+  color: #2A61CB; /* Синий акцент для названия */
+}
+
+/* Поля ввода */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.input-group label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #666;
+}
+
+.input-group input {
+  padding: 14px 16px;
+  border: 2px solid #e1e5ee;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.2s;
+  background: #fdfdfd;
+}
+
+.input-group input:focus {
+  border-color: #2A61CB;
+  outline: none;
+}
+
+.error-message {
+  color: #e74c3c;
+  font-size: 14px;
+  background: #fdf2f2;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+/* --- КНОПКИ --- */
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+/* Кнопка ВХОДА */
+.btn-login {
+  width: 100%;
+  padding: 14px;
+  background-color: #2A61CB; /* Ваш базовый цвет */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+.btn-login:hover {
+  background-color: #093DA0; /* Ваш цвет при наведении */
+}
+
+.btn-login:active {
+  transform: translateY(1px);
+}
+
+/* Кнопка РЕГИСТРАЦИИ */
+.btn-register {
+  width: 100%;
+  padding: 14px;
+  background-color: #ecf0f1; /* Ваш базовый цвет */
+  color: #2c3e50; /* Цвет текста темный для контраста */
+  border: none; /* Можно добавить border: 1px solid #ddd, если нужно */
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-register:hover {
+  background-color: #bdc3c7; /* Ваш цвет при наведении */
+}
+
+/* Адаптивность для мобильных (в столбик) */
+@media (max-width: 900px) {
+  .split-screen-container {
+    flex-direction: column;
+  }
+  
+  .left-pane {
+    flex: 0 0 250px; /* Фиксированная высота шапки */
+  }
+
+  .logo-card {
+    width: 150px;
+    height: 150px;
+    padding: 20px;
+    border-radius: 25px;
+  }
 }

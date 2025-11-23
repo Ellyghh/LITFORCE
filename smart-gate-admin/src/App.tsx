@@ -6,6 +6,7 @@ import SettingsPage from './pages/Settings/SettingsPage';
 import HistorePage from './pages/Histore/HistorePage';
 import DatabasePage from './pages/Database/DatabasePage';
 import UsersPage from './pages/Users/UsersPage';
+import RegisterPage from './pages/Register/RegisterPage';
 
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
     <Routes>
       {/* 1. СТРАНИЦА ЛОГИНА (Без меню) */}
       <Route path="/" element={<LoginPage />} />
-
+      <Route path="/register" element={<RegisterPage />} />
       {/* 2. ГРУППА СТРАНИЦ С МЕНЮ */}
       {/* Все маршруты внутри этого Route будут обернуты в MainLayout */}
       <Route path='/' element={<MainLayout />}>
