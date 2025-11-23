@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DAE1EB"
+    android:orientation="vertical">
+
+    <!-- Остальной код БЕЗ ИЗМЕНЕНИЙ -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:padding="20dp">
+
+            <!-- Логотип -->
+            <ImageView
+                android:id="@+id/logoImage"
+                android:layout_width="140dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="40dp"
+                android:scaleType="fitCenter"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/main_title"
+                android:src="@drawable/logo" />
+
+            <!-- Заголовок -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/enter_without_cards"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/inter"
+                android:textAlignment="center" />
+
+            <!-- Подзаголовок -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/add_car_number"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:fontFamily="@font/inter"
+                android:textAlignment="center" />
+
+            <!-- Разделитель -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="#CCCCCC" />
+
+            <!-- Остальные элементы БЕЗ ИЗМЕНЕНИЙ -->
+            <!-- Имя, телефон, пароль и т.д. -->
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

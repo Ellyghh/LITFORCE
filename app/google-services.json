@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "950916796998",
+    "project_id": "hacaton-e439e",
+    "storage_bucket": "hacaton-e439e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:950916796998:android:b0daac74ddd9d5c5873047",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCuz0mTCWdQb0IHrsKpqhoaoZ6o1TI42eU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

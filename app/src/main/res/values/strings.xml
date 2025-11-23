@@ -1,0 +1,58 @@
+<resources>
+    <string name="app_name">УМНЫЕВРАТА</string>
+    <string name="main_title">УМНЫЕВРАТА</string>
+    <string name="welcome_text">Добрый день\nНеобходимо прикрепиться к ЖК</string>
+    <string name="button_application">Оставить заявку на въезд</string>
+    <string name="button_history">История заявок</string>
+    <string name="button_passes">История проездов</string>
+    <string name="nav_home">Камеры</string>
+    <string name="nav_profile">Сообщения</string>
+    <string name="nav_settings">Настройки</string>
+
+    <string name="podtverdit">Подтвердить</string>
+    <string name="number">Номер автомобиля</string>
+    <string name="password">Универсальный пароль ЖК</string>
+    <string name="code">Универсальный код ЖК</string>
+
+    <string name="camera">Доступно после регистрации</string>
+
+    <string name="chat">Чаты</string>
+    <string name="jk">Сначала прикрепитесь к ЖК</string>
+    <string name="after">После прикрепления вы сможете общаться с соседями и УК</string>
+
+    <string name="attach_complex">Прикрепить Жилой Комплекс</string>
+    <string name="confirm_email">Подтвердить почту</string>
+    <string name="change_phone">Сменить номер телефона</string>
+    <string name="change_password">Сменить пароль</string>
+    <string name="add_vehicle">Добавить транспортное средство</string>
+
+    <string name="success_attachment">Жилой Комплекс успешно прикреплен!</string>
+    <string name="back_to_main">Вернуться на главный экран</string>
+
+    <string name="enter_without_cards">Въезд без карт и пропусков</string>
+    <string name="add_car_number">Просто добавьте номер своего автомобиля</string>
+    <string name="phone_email">Номер телефона/Почта</string>
+
+
+    <string name="inter">Вход в аккаунт</string>
+    <string name="inter_data">Введите ваши данные для входа</string>
+    <string name="email">Почта</string>
+    <string name="password1">Пароль</string>
+
+
+    <string name="universal_password">Универсальный пароль ЖК</string>
+    <string name="create_via_gosuslugi">Создать через Госуслуги</string>
+    <string name="login_account">Создать аккаунт</string>
+
+    <string name="first_name">ФИО</string>
+    <string name="confirm_password">Пароль</string>
+    <string name="choose">Выбрать</string>
+    <string name="application_title">Оставить заявку на въезд</string>
+    <string name="complex_address">Адрес: ЖК Престиж</string>
+    <string name="comment_hint">Комментарий</string>
+    <string name="date_hint">Дата</string>
+    <string name="time_hint">Время</string>
+    <string name="submit_application_button">Оставить заявку на въезд</string>
+
+
+</resources>
