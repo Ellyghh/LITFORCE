@@ -6,7 +6,7 @@
   
   .sidebar {
     width: 250px; /* Ширина меню */
-    background-color: #2c3e50;
+    background-color: #495180;
     color: white;
     display: flex;
     flex-direction: column;
@@ -52,4 +52,7 @@
     background-color: #f4f6f7;
     overflow-y: auto; /* Прокрутка, если контент длинный */
     padding: 40px;
+  }
+  * {
+    font-family: 'Poppins', sans-serif !important;
   }

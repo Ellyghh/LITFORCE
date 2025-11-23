@@ -1,5 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+
+import '@fontsource/poppins/300.css'; // Light
+import '@fontsource/poppins/400.css'; // Regular
+import '@fontsource/poppins/500.css'; // Medium
+import '@fontsource/poppins/600.css'; // Semi-bold
+import '@fontsource/poppins/700.css'; // Bold
+
 import App from './App.tsx';
 import { BrowserRouter } from 'react-router-dom'; 
 

@@ -35,17 +35,6 @@
     color: var(--text-main);
 }
 
-/* Бейдж для охранника */
-.user-badge {
-    background: #e8f4fd;
-    color: var(--primary);
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: bold;
-    border: 1px solid #bedafe;
-}
-
 /* --- ПАНЕЛЬ ФИЛЬТРОВ --- */
 .filters-panel {
     background: var(--card-bg);

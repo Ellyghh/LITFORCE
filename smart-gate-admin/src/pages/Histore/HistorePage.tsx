@@ -95,8 +95,6 @@ const HistoryPage: React.FC = () => {
       
       <div className="page-header">
         <h2>Журнал событий (Архив)</h2>
-        {/* Индикатор для охранника */}
-        <div className="user-badge">Режим просмотра: Охрана</div>
       </div>
 
       {/* --- ПАНЕЛЬ ФИЛЬТРОВ --- */}
