@@ -83,15 +83,6 @@ const LoginPage: React.FC = () => {
               >
                 {isLoading ? 'Вход...' : 'Войти'}
               </button>
-
-              <button 
-                type="button" 
-                className="btn-register"
-                onClick={handleRegisterClick}
-                disabled={isLoading}
-              >
-                Регистрация
-              </button>
             </div>
           </form>
         </div>

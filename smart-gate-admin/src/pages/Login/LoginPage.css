@@ -139,24 +139,6 @@
   transform: translateY(1px);
 }
 
-/* Кнопка РЕГИСТРАЦИИ */
-.btn-register {
-  width: 100%;
-  padding: 14px;
-  background-color: #ecf0f1; /* Ваш базовый цвет */
-  color: #2c3e50; /* Цвет текста темный для контраста */
-  border: none; /* Можно добавить border: 1px solid #ddd, если нужно */
-  border-radius: 8px;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.btn-register:hover {
-  background-color: #bdc3c7; /* Ваш цвет при наведении */
-}
-
 /* Адаптивность для мобильных (в столбик) */
 @media (max-width: 900px) {
   .split-screen-container {
