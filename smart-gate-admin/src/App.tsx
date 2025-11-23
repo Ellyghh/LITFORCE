@@ -18,7 +18,7 @@ function App() {
       {/* Все маршруты внутри этого Route будут обернуты в MainLayout */}
       <Route path='/' element={<MainLayout />}>
         
-        <Route path="/camers" element={<CamerasPage />} />
+        <Route path="/cameras" element={<CamerasPage />} />
         <Route path="/database" element={<DatabasePage />} />
         <Route path="/settings" element={<SettingsPage />} />
         <Route path="/history" element={<HistorePage />} />

@@ -5,7 +5,7 @@
     --text-main: #2c3e50;
     --text-sec: #7f8c8d;
     --border: #dce1e6;
-    --primary: #3498db;
+    --primary: #2A61CB;
     --success: #27ae60;
     --danger: #c0392b;
     --warning: #f39c12;
@@ -118,7 +118,7 @@ input:focus, select:focus {
 }
 
 .btn-search {
-    background-color: var(--primary);
+    background-color: #2A61CB;
     color: white;
     border: none;
     padding: 10px 30px;
@@ -127,10 +127,10 @@ input:focus, select:focus {
     cursor: pointer;
     transition: background 0.2s;
 }
-.btn-search:hover { background-color: #2980b9; }
+.btn-search:hover { background-color: #093DA0; }
 
 .btn-reset {
-    background-color: transparent;
+    background-color: #ecf0f1;
     color: var(--text-sec);
     border: 1px solid var(--border);
     padding: 10px 25px;
@@ -138,7 +138,7 @@ input:focus, select:focus {
     cursor: pointer;
     transition: background 0.2s;
 }
-.btn-reset:hover { background-color: #f1f1f1; }
+.btn-reset:hover { background-color: #bdc3c7; }
 
 /* --- ТАБЛИЦА --- */
 .table-container {

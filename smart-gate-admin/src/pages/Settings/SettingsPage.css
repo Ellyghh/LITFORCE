@@ -5,13 +5,14 @@
     --text-main: #2c3e50;
     --text-sec: #7f8c8d;
     --border: #dce1e6;
-    --primary: #3498db;
+    --default_btn: #2A61CB;
     --danger: #e74c3c;
+    --hover_btn: #093DA0;
 }
 
 .settings-page {
     padding: 20px;
-    background-color: var(--bg-color);
+    background-color: #f0f2f5;
     color: var(--text-main);
     height: 100%;
     box-sizing: border-box;
@@ -50,10 +51,17 @@
     transition: 0.2s;
 }
 
+.tabs-switch button:hover {
+    background: #3498db4d;
+}
+
 .tabs-switch button.active {
-    background: var(--primary);
+    background: var(--default_btn);
     color: white;
     box-shadow: 0 2px 4px rgba(52, 152, 219, 0.3);
+}
+.tabs-switch button.active:hover {
+    background: var(--hover_btn);
 }
 
 /* --- СЕТКА --- */
@@ -112,7 +120,7 @@ input[type="text"], input[type="time"], select {
     outline: none;
     font-size: 14px;
 }
-input:focus, select:focus { border-color: var(--primary); }
+input:focus, select:focus { border-color: var(--default_btn); }
 
 .row { display: flex; gap: 10px; }
 .col { flex: 1; }
@@ -120,7 +128,7 @@ input:focus, select:focus { border-color: var(--primary); }
 /* Чекбокс */
 .checkbox-group {
     display: flex;
-    align-items: center;
+    align-items: center;    
     gap: 10px;
     background: #f8f9fa;
     padding: 10px;
@@ -144,6 +152,7 @@ input:focus, select:focus { border-color: var(--primary); }
 
 /* --- КНОПКИ --- */
 .btn-check, .btn-add-rule {
+    background: var(--default_btn); 
     width: 100%;
     padding: 12px;
     border: none;
@@ -152,12 +161,13 @@ input:focus, select:focus { border-color: var(--primary); }
     cursor: pointer;
     color: white;
 }
-.btn-check { background: var(--primary); }
+.btn-check:hover, .btn-add-rule:hover{background: var(--hover_btn); }
 .btn-check:disabled { opacity: 0.7; cursor: wait; }
-.btn-add-rule { background: #27ae60; margin-top: 10px; }
+.btn-add-rule { margin-top: 10px; }
+
 
 .btn-small {
-    background: var(--primary);
+    background: var(--default_btn);
     color: white;
     border: none;
     padding: 6px 12px;
@@ -206,7 +216,7 @@ input:focus, select:focus { border-color: var(--primary); }
     border-radius: 4px;
 }
 .day-option:hover { background: #f0f2f5; }
-.day-option.selected { background: #e8f4fd; color: var(--primary); }
+.day-option.selected { background: #e8f4fd; color: var(--default_btn); }
 
 /* --- РАСШИРЕННЫЕ ФИЛЬТРЫ --- */
 .filters-panel {
@@ -240,8 +250,10 @@ input:focus, select:focus { border-color: var(--primary); }
     font-size: 14px;
     font-weight: bold;
 }
-.btn-filter.apply { background: var(--primary); color: white; }
+.btn-filter.apply { background: var(--default_btn); color: white; }
 .btn-filter.clear { background: #ecf0f1; color: var(--text-main); border: 1px solid #dce1e6; }
+.btn-filter.apply:hover{background: var(--hover_btn);}
+.btn-filter.clear:hover{background: #d9dadd;}
 
 /* Стили для DaysSelector внутри фильтров */
 .days-input.empty {
@@ -316,6 +328,6 @@ input:focus, select:focus { border-color: var(--primary); }
     border-radius: 4px;
     transition: 0.2s;
 }
-.icon-btn.edit:hover { background: #e8f4fd; color: var(--primary); }
+.icon-btn.edit:hover { background: #e8f4fd; color: var(--default_btn); }
 .icon-btn.delete { color: #e74c3c; }
 .icon-btn.delete:hover { background: #fadbd8; }

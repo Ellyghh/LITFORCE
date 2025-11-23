@@ -191,7 +191,7 @@ const DashboardPage: React.FC = () => {
 
         {/* 3. ПАНЕЛЬ С ОДНОЙ КНОПКОЙ */}
         <div className="manual-control-bar">
-            <button className="btn-manual-open" onClick={() => alert('Ворота открываются...')}>
+            <button className="btn-manual-open">
                 ОТКРЫТЬ ВОРОТА
             </button>
         </div>
