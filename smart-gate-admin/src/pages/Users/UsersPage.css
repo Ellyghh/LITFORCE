@@ -1,0 +1,198 @@
+/* --- ПЕРЕМЕННЫЕ ТЕМЫ --- */
+.theme-light {
+    --bg-color: #f0f2f5;
+    --card-bg: #ffffff;
+    --text-main: #2c3e50;
+    --text-sec: #7f8c8d;
+    --border: #dce1e6;
+    --primary: #3498db;
+    --success: #27ae60;
+    --danger: #e74c3c;
+    --warning: #f39c12;
+}
+
+.user-page {
+    padding: 20px;
+    background-color: var(--bg-color);
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-family: system-ui, sans-serif;
+}
+
+.page-header h2 {
+    margin: 0;
+    color: var(--text-main);
+}
+
+/* --- ЛЭЙАУТ (2 КОЛОНКИ) --- */
+.user-grid {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 20px;
+    align-items: start;
+    flex: 1;
+}
+
+.left-column, .right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* --- КАРТОЧКИ --- */
+.card {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+}
+
+.card h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: var(--text-sec);
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 10px;
+}
+
+/* --- ФОРМА --- */
+.form-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+label {
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--text-sec);
+}
+
+input, select {
+    padding: 10px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+}
+
+input:focus, select:focus { border-color: var(--primary); }
+
+.input-error { border-color: var(--danger); }
+.error-msg { color: var(--danger); font-size: 12px; margin-top: -10px; }
+
+.btn-add {
+    background-color: var(--success);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.btn-add:hover { background-color: #219150; }
+
+/* --- ФИЛЬТРЫ --- */
+.filters-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.filter-item { flex: 1; min-width: 150px; }
+.filter-item input, .filter-item select { width: 100%; box-sizing: border-box; }
+
+.btn-reset {
+    padding: 0 20px;
+    border: 1px solid var(--border);
+    background: white;
+    color: var(--text-sec);
+    border-radius: 6px;
+    cursor: pointer;
+}
+.btn-reset:hover { background-color: #f9f9f9; }
+
+/* --- ТАБЛИЦА --- */
+.table-scroll { overflow-x: auto; }
+
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.user-table th {
+    text-align: left;
+    padding: 12px 15px;
+    background: #f8f9fa;
+    color: var(--text-sec);
+    border-bottom: 2px solid var(--border);
+}
+
+.user-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: middle;
+    color: var(--text-main);
+}
+
+.login-cell { font-weight: bold; }
+
+/* Бейджи Ролей */
+.role-badge {
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+}
+.role-badge.admin { background: #fce4ec; color: #c2185b; }
+.role-badge.guard { background: #e8f5e9; color: #2e7d32; }
+.role-badge.concierge { background: #e3f2fd; color: #1565c0; }
+
+/* Статус (точка) */
+.status-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+.status-dot.active { background-color: var(--success); box-shadow: 0 0 4px var(--success); }
+.status-dot.blocked { background-color: var(--danger); }
+
+/* Кнопки действий */
+.actions-cell { text-align: right; white-space: nowrap; }
+.icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 4px;
+    transition: 0.2s;
+    margin-left: 5px;
+}
+.icon-btn.edit:hover { background: #e3f2fd; color: var(--primary); }
+.icon-btn.delete { color: #e74c3c; }
+.icon-btn.delete:hover { background: #fadbd8; }
+
+/* Адаптивность */
+@media (max-width: 900px) {
+    .user-grid {
+        grid-template-columns: 1fr;
+    }
+}

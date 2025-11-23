@@ -5,7 +5,7 @@ import CamerasPage from './pages/Cameras/CamerasPage';
 import SettingsPage from './pages/Settings/SettingsPage';
 import HistorePage from './pages/Histore/HistorePage';
 import DatabasePage from './pages/Database/DatabasePage';
-import UserPage from './pages/User/UserPage';
+import UsersPage from './pages/Users/UsersPage';
 import ExitPage from './pages/Exit/ExitPage';
 
 
@@ -23,7 +23,7 @@ function App() {
         <Route path="/database" element={<DatabasePage />} />
         <Route path="/settings" element={<SettingsPage />} />
         <Route path="/history" element={<HistorePage />} />
-        <Route path="/users" element={<UserPage />} />
+        <Route path="/users" element={<UsersPage />} />
         <Route path="/exit" element={<ExitPage />} />
       </Route>
       
